@@ -1,0 +1,8 @@
+<div class="container">
+<h1> <%= @task.title  %> </h1>
+<p> <%= @task.details  %> </p>
+<p> This task is <%= @task.completed ? "completed" : "not completed"  %> </p>
+<p> <%= link_to "Back to all tasks", tasks_path  %> </p>
+<p> <%= link_to "Delete task", task_destroy_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %> </p>
+<p> <%= link_to "Edit task", task_edit_path  %> </p>
+</div>
